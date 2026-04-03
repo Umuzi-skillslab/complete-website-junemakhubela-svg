@@ -1,0 +1,186 @@
+/* Styling for all of the pages' body */
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #ddd;
+}
+
+/*Styling for all of the pages' header*/
+.header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/*Navigation styling for all of the pages*/
+nav ul {
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    background-color: #222;
+
+
+}
+
+nav li a {
+    display: block;
+
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+nav li a:hover {
+    background-color: #ddd;
+
+    color: black;
+}
+
+/*hero section styling*/
+.hero {
+    padding: 30px;
+    background-color: #ddd;
+
+}
+
+/* making all images to have the same size */
+img {
+    width: 325px;
+    height: 325px;
+
+}
+
+/*aligning main content in each page*/
+.aboutSection,
+#projectsMain,
+#contactMain {
+    padding-left: 30px;
+}
+
+
+
+/*intro section styling*/
+.intro {
+    padding: 30px;
+}
+
+/* Form styling*/
+form input {
+    display: block;
+    margin: 10px 0;
+}
+
+form {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:invalid:focus {
+    border-color: red;
+    /* Highlights errors while typing */
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*Footer styling*/
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 30px;
+
+    text-align: left;
+}
+
+.contactLink {
+    color: white;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+/* Gauge Styles */
+.gauge-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    /* The grey track */
+    border-radius: 10px;
+    height: 8px;
+    overflow: hidden;
+    /* Keeps the bar inside the track */
+}
+
+.gauge-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #101011 0%, #152525 100%);
+    /* Blue gradient */
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+    /* Animates on page load */
+}
+
+/* Responsive Table Wrapper */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* Bonus, animating the footer */
+.footer {
+    background: linear-gradient(-45deg, #929292, #7c7c7c, #474747, #1d1d1d);    
+    animation: gradient-shift 15s ease infinite;
+    /* Applies the animation */
+
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
