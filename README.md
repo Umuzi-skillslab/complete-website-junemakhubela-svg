@@ -133,3 +133,162 @@ The styling approach was to improve overall appearance of the website. This incl
 2. There were many things to fix at different places. I had to do my own checklist and to solve the problem bit by bit.
 3. I had to make a wireframe of how I want the site to look.
 4. I then started with the home page. Found the errors, fixed them and styled. I continued with that procedure until I got to the contact page.
+
+---
+---
+---
+
+## <mark>**Portfolio Improvements:**</mark>
+
+
+
+## 1. HTML Structure & Semantics
+
+Added `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+to All pages.
+
+Added `<meta name="description" content="…">`
+to All pages.
+
+Added `lang="en"` attribute to `<html>` tag
+to `projects.html` and `contact.html`.
+
+Removed unnecessary `<div class="header">` wrapper inside `<header>`
+from All pages.
+
+Replaced invalid `</br>` tag from `projects.html`.
+
+Wrapped images in `<figure>` / `<figcaption>` for
+`about.html`, `projects.html` and `index.html`
+
+Added a skip-to-content link `<a href="#main-content" class="skip-link">` to
+All pages.
+
+---
+
+## 2. Navigation & Linking
+
+Added `aria-current="page"` to the active navigation link on each page
+for All the pages.
+
+Added visible focus styles (`outline: 3px solid #007BFF`) for all interactive elements to
+`styles.css`.
+
+Added `nav li a[aria-current="page"]` style (bottom border + bold) as a visual active-page indicator to
+`styles.css`
+
+---
+
+## 3. Images & Tables
+
+Replaced fixed dimensions with `max-width: 100%; height: auto` in the
+`styles.css` file.
+
+Moved skill-bar widths from inline `style="width: X%"` initially in the `about.html` file, to CSS custom property `--gauge-width` in the `styles.css` file.
+
+Added `<caption>` to the skills table in the `about.html` file.
+
+Added `scope="col"` to all `<th>` elements in the `about.html` file.
+
+Activated `.table-wrapper` div around the skills table in the `about.html` file.
+
+Added `role="img"` and `aria-label` to each gauge container in the `about.html` file.
+
+Updated project image alt text to be more descriptive in the `projects.html` file.
+
+---
+
+## 4. Forms & Accessibility
+
+Wrapped related form fields in `<fieldset>` / `<legend>` groups ("Your Details" and "Your Message")
+in the `contact.html` file.
+
+Added `autocomplete` attributes (`name`, `tel`, `email`) to relevant inputs
+in the `contact.html` file.
+
+Added `title` attributes to inputs with format requirements
+in the `contact.html` file.
+
+Added an `aria-live="polite"` status div (`#form-status`)
+in the `contact.html` file.
+
+Added `novalidate` to the `<form>` element
+in the `contact.html` file.
+
+Changed submit button text from "Send" to "Send Message"
+in the `contact.html` file.
+
+---
+
+## 5. CSS Styling & Selectors
+
+Added CSS custom properties (variables) for all repeated colour, spacing, and font values
+in the `styles.css` file.
+
+Removed duplicate `.footer` rule block
+from the `styles.css` file.
+
+Added explicit `:focus` styles for links, inputs, textarea, select, and button
+in the `styles.css` file.
+
+Added `button:hover` and `.btn:hover` colour change
+in the `styles.css` file.
+
+Added `@media (prefers-reduced-motion: reduce)` block to disable animations when requested by user, in the
+`styles.css` file.
+
+---
+
+## 6. Box Model & Layout
+
+Added `*, *::before, *::after { box-sizing: border-box; }` reset
+in the `styles.css` file.
+
+Added `max-width: 960px; margin: 0 auto` container to `<main>`
+in the `styles.css` file.
+
+Converted project sections for the projects page to a CSS Grid layout (`auto-fit`, `minmax(260px, 1fr)`)
+in the `styles.css` file.
+
+Added flex layout with `flex-wrap: wrap` to the hero section
+in the `styles.css` file.
+
+Added `@media (max-width: 600px)` breakpoint with mobile adjustments
+in the `styles.css` file.
+
+Added `line-height: 1.6` to the `body` rule
+in the `styles.css` file.
+
+---
+
+## 7. Text & Colour Design
+
+Added `--color-accent` and `--color-accent-hover` variables to be applied consistently to links and buttons
+in the `styles.css` file.
+
+Added hover and focus colour changes to `.contactLink` in the footer, in the
+`styles.css` file.
+
+Added `justify-content: center` to `nav ul` in the
+`styles.css` file.
+
+Styled `<th>` elements with a light background colour
+in the`styles.css` file.
+
+---
+
+## 8. Code Quality & Organisation
+
+Organised CSS into clearly labelled sections using meaningful comments throughout the
+`styles.css` file.
+
+Added `font-family` and `font-size: 1rem` explicitly to form input elements in the
+`styles.css` file.
+
+Added `background-size: 400% 400%` to `.footer`, in the `styles.css` file, so the gradient animation actually runs.
+
+
+Added a `.btn` call-to-action link to the home page hero pointing to the projects page, in the 
+`index.html` file.
+
+---
