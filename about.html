@@ -3,52 +3,57 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn about June Makhubela — front-end web developer with a background in engineering and a passion for accessible, responsive interfaces.">
+    <title>About | June Makhubela</title>
     <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
 <body>
 
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header>
-        <div class="header">
-            <h1>About Me</h1>
-            <nav aria-label="Main Navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>About Me</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section class="aboutSection">
-            <div>
-                <h2>Meet JuneDevs:</h2>
-                <img src="./images/ResumeIDPhoto.jpg" alt="developer profile photo">
-            </div>
+    <main id="main-content">
+
+        <section class="aboutSection profile-section">
+            <figure>
+                <img src="./images/ResumeIDPhoto.jpg" alt="June Makhubela — developer profile photo">
+                <figcaption>June Makhubela, Front-End Developer</figcaption>
+            </figure>
         </section>
 
         <section class="aboutSection">
-            <div>
-                <h3>My Background</h3>
-                <p>I am a front-end web developer who loves turning web designs into fast, accesible interfaces. <br />
-                    Over the past 2 years I have built responsive web apps mainly with JavaScript and React. <br />
-                    My background in engineering helps me in breaking down big problems into smaller testable parts,
-                    <br />
-                    systematic debugging and component-based designs.
-                </p>
+            <h3>My Background</h3>
+            <p>I am a front-end web developer who loves turning web designs into fast, accessible interfaces.
+                Over the past 2 years I have built responsive web apps mainly with JavaScript and React.
+                My background in engineering helps me in breaking down big problems into smaller testable parts,
+                systematic debugging and component-based designs.
+            </p>
 
-                <h3>Skills</h3>
+            <h3>Skills</h3>
 
+            <!-- Table wrapper to enable horizontal scroll on small screens -->
+            <div class="table-wrapper">
                 <table>
+                    <caption>Technical skills and proficiency levels</caption>
                     <thead>
                         <tr>
-                            <th>Category</th>
-                            <th>Technologies</th>
-                            <th>Skill Level</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Technologies</th>
+                            <th scope="col">Skill Level</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -56,8 +61,8 @@
                             <td><strong>Frontend</strong></td>
                             <td>HTML, CSS, JavaScript, React</td>
                             <td>
-                                <div class="gauge-container">
-                                    <div class="gauge-bar" style="width: 90%;"></div>
+                                <div class="gauge-container" role="img" aria-label="Skill level: 90%">
+                                    <div class="gauge-bar" style="--gauge-width: 90%;"></div>
                                 </div>
                             </td>
                         </tr>
@@ -65,31 +70,31 @@
                             <td><strong>Backend</strong></td>
                             <td>Node.js</td>
                             <td>
-                                <div class="gauge-container">
-                                    <div class="gauge-bar" style="width: 50%;"></div>
+                                <div class="gauge-container" role="img" aria-label="Skill level: 50%">
+                                    <div class="gauge-bar" style="--gauge-width: 50%;"></div>
                                 </div>
                             </td>
-
                         </tr>
                         <tr>
                             <td><strong>Other</strong></td>
                             <td>Python, Progress-4GL</td>
                             <td>
-                                <div class="gauge-container">
-                                    <div class="gauge-bar" style="width: 65%;"></div>
+                                <div class="gauge-container" role="img" aria-label="Skill level: 65%">
+                                    <div class="gauge-bar" style="--gauge-width: 65%;"></div>
                                 </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-
             </div>
+
         </section>
     </main>
 
     <footer class="footer">
         <p>Contact me at <a href="mailto:junemakhubela@gmail.com" class="contactLink">junemakhubela@gmail.com</a></p>
     </footer>
+
 </body>
 
 </html>
